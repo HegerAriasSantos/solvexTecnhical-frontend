@@ -1,4 +1,8 @@
 {
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -19,26 +23,51 @@
   },
   "plugins": ["react", "@typescript-eslint", "import", "jsx-a11y", "react-hooks", "prettier"],
   "rules": {
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
+    "prettier/prettier": "error",
+    "arrow-body-style": "off",
+    "react/prop-types": 0,
+    "array-bracket-newline": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "camelcase": "off",
+    "@typescript-eslint/camelcase": "off",
+    "no-restricted-exports": "off",
+    "react/display-name": 0,
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "react/function-component-definition": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/indent": 0,
+    "@typescript-eslint/member-delimiter-style": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/ban-ts-ignore": ["off"],
+    "@typescript-eslint/no-unescaped-entities": 0,
+    "react/no-unescaped-entities": 0,
+    "quotes": [
+      "error",
+      "double",
       {
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_",
-        "caughtErrorsIgnorePattern": "^_"
+        "allowTemplateLiterals": true
       }
     ],
-
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-
-    "prettier/prettier": [
-      "warn",
+    "object-curly-spacing": ["error", "always"],
+    "no-empty-pattern": ["off"],
+    "no-undef": ["error"],
+    "no-var": ["error"],
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": ["off"],
+    "no-underscore-dangle": "off",
+    "linebreak-style": "off",
+    "@typescript-eslint/no-unused-vars": [
+      2,
       {
-        "endOfLine": "auto",
-        "singleQuote": true
+        "argsIgnorePattern": "^_"
       }
-    ]
+    ],
+    "no-console": [2]
   }
 }

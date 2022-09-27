@@ -845,7 +845,7 @@ binary-extensions@^2.0.0:
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
 
-bootstrap@^5.2.0:
+bootstrap@^5.2.0, bootstrap@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.2.1.tgz#45f97ff05cbe828bad807b014d8425f3aeb8ec3a"
   integrity sha512-UQi3v2NpVPEi1n35dmRRzBJFlgvWHYwyem6yHhuT6afYF+sziEt46McRbT//kVXZ7b1YUYEVGdXEH74Nx3xzGA==
@@ -2780,12 +2780,12 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-sweetalert2-react-content@^5.0.2:
+sweetalert2-react-content@^5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/sweetalert2-react-content/-/sweetalert2-react-content-5.0.3.tgz#1c7d38d01cbaf7abc7311ef5d77698ed23dc1087"
   integrity sha512-DQXblZn0LHTvmaZquNQncZIE3Ljox85sAKKbXjYlDyFejyOibHwprAVvtQQpAUG3bgvyDUeAOE/BDFcVx6KUow==
 
-sweetalert2@^11.4.26:
+sweetalert2@^11.4.34:
   version "11.4.34"
   resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.4.34.tgz#0208909647a09f6b5a063b59a5afcddad75f0e18"
   integrity sha512-R9u4mE4zYBoJbwFypeioyE+NKhZYk+6DzHTGA8J21naQOkqeWEGWVT+OFEg/kS1/MMogj92x/1pCsx92I2VTbA==
@@ -2917,9 +2917,9 @@ use-sync-external-store@^1.0.0:
     react-router-dom "^6.3.0"
     react-select "^5.4.0"
     sass "^1.54.0"
-    sweetalert2 "^11.4.26"
-    sweetalert2-react-content "^5.0.2"
-    vite-react-ts-eslint-prettier "file:../../../../AppData/Local/Yarn/Cache/v6/npm-vite-react-ts-eslint-prettier-0.0.0-4e91eaf4-cdb9-41fe-ab49-f0e21223b965-1664234086715/node_modules/vite-react-ts-eslint-prettier"
+    sweetalert2 "^11.4.34"
+    sweetalert2-react-content "^5.0.3"
+    vite-react-ts-eslint-prettier "file:../../../../AppData/Local/Yarn/Cache/v6/npm-vite-react-ts-eslint-prettier-0.0.0-0e00af12-2660-4337-9a60-1b7b15e4bfdd-1664246102455/node_modules/vite-react-ts-eslint-prettier"
 
 vite-tsconfig-paths@^3.5.0:
   version "3.5.1"

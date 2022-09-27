@@ -1,22 +1,37 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AdminRoutes from './AdminRoute';
-import UserRoutes from './UserRoute';
 import Layout from './Layout';
 import { lazy, Suspense, useEffect } from 'react';
 import Loading from '~/views/Loading';
+import {
+  BRANDS,
+  BRANDS_CREATE,
+  BRANDS_UPDATE,
+  PRODUCTS,
+  PRODUCTS_CREATE,
+  PRODUCT_UPDATE,
+  SHOPPINGLISTS,
+  SHOPPINGLISTS_CREATE,
+  SHOPPINGLISTS_UPDATE,
+  SUPERMARKETS,
+  SUPERMARKETS_CREATE,
+  SUPERMARKETS_UPDATE,
+  USERS,
+  USERS_CREATE,
+  USERS_UPDATE,
+} from './routes';
 
 const Home = lazy(() => import('~/views/Home'));
 const NotFound = lazy(() => import('~/views/NotFound'));
-const Register = lazy(() => import('~/views/Register'));
-const Login = lazy(() => import('~/views/Login'));
-const Services = lazy(() => import('~/views/Services'));
-const ServicesAdmin = lazy(() => import('~/views/ServicesAdmin'));
-const ServicesForm = lazy(() => import('~/components/ServicesForm'));
-const About = lazy(() => import('~/views/About'));
-const Bill = lazy((() => import('~/views/Bill')));
-const Invoices = lazy((() => import('~/views/Invoices')))
-const Quotes = lazy((() => import('~/views/Quotes')))
-const QuotesAdmin = lazy((() => import('~/views/QuotesAdmin')))
+const Products = lazy(() => import('~/views/Products'));
+const ProductsForm = lazy(() => import('~/views/ProductsForm'));
+const Brands = lazy(() => import('~/views/Brands'));
+const BrandsForm = lazy(() => import('~/views/BrandsForm'));
+const Users = lazy(() => import('~/views/Users'));
+const UsersForm = lazy(() => import('~/views/UsersForm'));
+const ShoppingList = lazy(() => import('~/views/ShoppingList'));
+const ShoppingListForm = lazy(() => import('~/views/ShoppingListForm'));
+const SuperMarket = lazy(() => import('~/views/SuperMarket'));
+const SuperMarketForm = lazy(() => import('~/views/SuperMarketForm'));
 
 const App = () => {
   useEffect(() => {
@@ -26,36 +41,35 @@ const App = () => {
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Routes>
-
           {/* layout */}
           <Route path='/' element={<Layout />}>
             <Route element={<Home />} path='/' />
-            <Route element={<About />} path='/about' />
-            <Route element={<Services />} path='/services' />
-            <Route element={<Register type="user" />} path='/register' />
-            <Route element={<Login />} path='/login' />
 
-            {/* Protected Admin routes */}
-            <Route path='/' element={<AdminRoutes />}>
-              <Route element={<Invoices />} path='/admin/invoice' />
-              <Route element={<ServicesAdmin />} path='/admin/services' />
-              <Route element={<ServicesForm type='edit' />} path='/admin/services/edit/:id' />
-              <Route element={<ServicesForm type='create' />} path='/admin/services/create' />
-              <Route element={<Bill />} path='/admin/invoice/:id' />
-              <Route element={<Register type="admin" />} path='/admin/register' />
-              <Route element={<QuotesAdmin />} path='/admin/quote' />
-            </Route>
+            <Route element={<Products />} path={PRODUCTS} />
+            <Route element={<ProductsForm />} path={PRODUCTS_CREATE} />
+            <Route element={<ProductsForm />} path={PRODUCT_UPDATE(':id')} />
 
-            {/* Protected Client routes */}
-            <Route path='/' element={<UserRoutes />}>
-              <Route element={<Quotes />} path='/user/quote' />
-              <Route element={<Home />} path='/user' />
-            </Route>
+            <Route element={<Brands />} path={BRANDS} />
+            <Route element={<BrandsForm />} path={BRANDS_CREATE} />
+            <Route element={<BrandsForm />} path={BRANDS_UPDATE(':id')} />
+
+            <Route element={<Users />} path={USERS} />
+            <Route element={<UsersForm />} path={USERS_CREATE} />
+            <Route element={<UsersForm />} path={USERS_UPDATE(':id')} />
+
+            <Route element={<ShoppingList />} path={SHOPPINGLISTS} />
+            <Route element={<ShoppingListForm />} path={SHOPPINGLISTS_CREATE} />
+            <Route element={<ShoppingListForm />} path={SHOPPINGLISTS_UPDATE(':id')} />
+
+            <Route element={<SuperMarket />} path={SUPERMARKETS} />
+            <Route element={<SuperMarketForm />} path={SUPERMARKETS_CREATE} />
+            <Route element={<SuperMarketForm />} path={SUPERMARKETS_UPDATE(':id')} />
+
             <Route element={<NotFound />} path='*' />
           </Route>
         </Routes>
       </Suspense>
-    </BrowserRouter >
+    </BrowserRouter>
   );
 };
 
