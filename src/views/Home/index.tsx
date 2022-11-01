@@ -1,9 +1,8 @@
 import './styles.scss';
-import { Link } from 'react-router-dom';
-import { PRODUCTS } from '~/router/routes';
-import { Button } from 'react-bootstrap';
-
+import { useState } from 'react';
 function App() {
+  const [state, setState] = useState({});
+
   return (
     <div
       className='container'
@@ -15,10 +14,17 @@ function App() {
         alignItems: 'center',
       }}
     >
-      <h2>Welcome to my solution test</h2>
-      <Link to={PRODUCTS}>
-        <Button>Go to Products</Button>
-      </Link>
+      <button
+        onChange={() =>
+          setState((e) => {
+            console.log(e);
+            return {
+              ...e,
+              name: 'test',
+            };
+          })
+        }
+      ></button>
     </div>
   );
 }
